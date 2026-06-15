@@ -1,0 +1,4 @@
+interface:
+  display_name: "xiaoqi"
+  short_description: "小七创作套件总入口和路由"
+  default_prompt: "帮我判断应该用哪个小七 skill，并继续完成任务。"

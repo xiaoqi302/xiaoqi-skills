@@ -1,0 +1,7 @@
+dist/
+.DS_Store
+*.log
+tmp/
+generated/
+.env
+.env.*

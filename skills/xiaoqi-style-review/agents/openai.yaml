@@ -1,0 +1,4 @@
+interface:
+  display_name: "xiaoqi-style-review"
+  short_description: "审校文章是否符合小七风格"
+  default_prompt: "检查这篇稿子像不像小七风格，并给出可替换改写。"

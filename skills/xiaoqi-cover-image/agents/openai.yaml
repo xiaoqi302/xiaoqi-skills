@@ -1,0 +1,4 @@
+interface:
+  display_name: "xiaoqi-cover-image"
+  short_description: "生成小七风格文章封面方向和提示词"
+  default_prompt: "为这篇文章设计小七风格封面图方向和提示词。"

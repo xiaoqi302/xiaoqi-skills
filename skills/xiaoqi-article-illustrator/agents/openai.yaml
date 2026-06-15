@@ -1,0 +1,4 @@
+interface:
+  display_name: "xiaoqi-article-illustrator"
+  short_description: "为小七文章拆解 5-8 张正文配图"
+  default_prompt: "为这篇文章规划 5-8 张小七风格正文配图并写提示词。"
