@@ -4,9 +4,10 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TARGET="codex"
 DRY_RUN=0
+BACKUP=1
 
 usage() {
-  echo "usage: tools/install.sh --target codex|claude|both [--dry-run]" >&2
+  echo "usage: tools/install.sh --target codex|claude|both [--dry-run] [--no-backup]" >&2
 }
 
 while [ "$#" -gt 0 ]; do
@@ -17,6 +18,10 @@ while [ "$#" -gt 0 ]; do
       ;;
     --dry-run)
       DRY_RUN=1
+      shift
+      ;;
+    --no-backup)
+      BACKUP=0
       shift
       ;;
     -h|--help)
@@ -54,13 +59,24 @@ for base in "${targets[@]}"; do
     mkdir -p "$base"
   fi
 
+  backup_dir="$base/.xiaoqi-skills-backups/$(date +%Y%m%d-%H%M%S)"
+
   for skill_dir in "$ROOT_DIR"/skills/*; do
     [ -d "$skill_dir" ] || continue
     name="$(basename "$skill_dir")"
     dest="$base/$name"
     echo "  install $name -> $dest"
     if [ "$DRY_RUN" = "0" ]; then
-      rm -rf "$dest"
+      if [ -e "$dest" ]; then
+        if [ "$BACKUP" = "1" ]; then
+          mkdir -p "$backup_dir"
+          rm -rf "$backup_dir/$name"
+          mv "$dest" "$backup_dir/$name"
+          echo "    backup existing -> $backup_dir/$name"
+        else
+          rm -rf "$dest"
+        fi
+      fi
       cp -R "$skill_dir" "$dest"
     fi
   done

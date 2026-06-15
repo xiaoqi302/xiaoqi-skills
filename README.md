@@ -6,6 +6,8 @@
 
 ## 安装
 
+安装脚本会从本仓库 `skills/` 真源复制到目标目录。目标 skill 已存在时，会先备份到目标目录的 `.xiaoqi-skills-backups/`。
+
 ### Codex
 
 ```bash
@@ -81,6 +83,13 @@
 
 产物在 `dist/skills/`。
 
+## 真源和双端 bridge
+
+- 真源说明见 `SOURCE_OF_TRUTH.md`。
+- Agent 修改规则见 `AGENTS.md`。
+- Codex / Claude 映射见 `tools/skill-bridge-map.md`。
+- `~/.codex/skills` 和 `~/.claude/skills` 都不是长期维护位置。
+
 ## 验证
 
 ```bash
@@ -94,6 +103,8 @@
 - `name` 是否和目录名一致。
 - 每个 skill 是否有 `agents/openai.yaml`。
 - README 是否列出所有 skill。
+- `SKILL.md` 引用的 `references/`、`assets/`、`examples/` 文件是否存在。
+- 是否残留旧依赖名或不支持的 frontmatter 字段。
 
 ## 设计原则
 

@@ -31,7 +31,9 @@ trap 'rm -rf "$stage"' EXIT
 
 mkdir -p "$stage/xiaoqi-skills-$VERSION"
 cp "$ROOT_DIR/README.md" "$stage/xiaoqi-skills-$VERSION/README.md"
+cp "$ROOT_DIR/AGENTS.md" "$stage/xiaoqi-skills-$VERSION/AGENTS.md"
 cp "$ROOT_DIR/LICENSE" "$stage/xiaoqi-skills-$VERSION/LICENSE"
+cp "$ROOT_DIR/SOURCE_OF_TRUTH.md" "$stage/xiaoqi-skills-$VERSION/SOURCE_OF_TRUTH.md"
 cp "$ROOT_DIR/VERSION" "$stage/xiaoqi-skills-$VERSION/VERSION"
 cp -R "$ROOT_DIR/skills" "$stage/xiaoqi-skills-$VERSION/skills"
 cp -R "$ROOT_DIR/tools" "$stage/xiaoqi-skills-$VERSION/tools"
