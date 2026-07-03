@@ -1,0 +1,6 @@
+interface:
+  display_name: "xiaoqi-wechat"
+  short_description: "生成小七公众号文章并配封面和插图"
+  default_prompt: "Use $xiaoqi-wechat to rewrite this article into xiaoqi-wechat style, then generate a cover and article illustrations with $ian-xiaohei-illustrations."
+policy:
+  allow_implicit_invocation: true

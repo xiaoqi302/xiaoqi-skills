@@ -1,0 +1,22 @@
+interface:
+  display_name: "xiaoqi-wechat"
+  short_description: "生成小七公众号文章并编排封面和正文配图"
+  default_prompt: "把这份素材改写成小七公众号风格文章，定稿后继续生成封面和正文配图。"
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "openai"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    openai: "metadata-adapter"
+    generic: "neutral-source"

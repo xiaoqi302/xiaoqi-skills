@@ -1,0 +1,4 @@
+interface:
+  display_name: "xiaoqi-tech-note"
+  short_description: "生成或改写小七风格手绘技术解释图提示词"
+  default_prompt: "把这个技术概念生成小七风格手绘技术解释图，默认 16:9、英文可见文字；如果我指定中文、双语、比例或只要提示词，请按我的要求执行。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Xiaoqi Parallel Goals"
+  short_description: "把任务拆成 build brief、顶层目标和并行子目标"
+  default_prompt: "Use $xiaoqi-parallel-goals to turn this task into a build brief, top-level goal, and parallel agent goals."
