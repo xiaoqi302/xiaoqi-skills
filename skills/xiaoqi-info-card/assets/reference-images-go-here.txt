@@ -1,7 +1,0 @@
-Put reference images for this style in this assets directory when local image files are available.
-Suggested names:
-- before-after-rag-memory.png
-- agent-schema-memory.png
-- rl-agent-loop.png
-- rlhf-three-steps.png
-- reward-model-pipeline.png

@@ -1,4 +1,4 @@
 interface:
-  display_name: "xiaoqi-cover-image"
-  short_description: "生成小七风格文章封面方向和提示词"
-  default_prompt: "为这篇文章设计小七风格封面图方向和提示词。"
+  display_name: "小七封面导演"
+  short_description: "为文章、播客与视频设计小七风格封面方向并完成出图质检"
+  default_prompt: "使用 $xiaoqi-cover-image 为这篇文章设计并生成一张小七风格封面。"

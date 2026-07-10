@@ -9,6 +9,9 @@ Theme: {主题}
 Core idea: {核心意思}
 Composition: {构图隐喻}
 
+Character anchor, repeat this exact block across the whole series:
+{角色锚点}
+
 Scene:
 {小白作为核心动作主体的画面描述。小白是白色空脸、深色短斗篷或长外套、细手脚、冷静观察者气质，正在执行一个明确动作。}
 
@@ -22,21 +25,10 @@ Constraints:
 One core idea only. Xiaobai must be essential to the scene. No PPT infographic, no formal flowchart, no dense architecture diagram, no tech UI, no existing IP character, no childish cartoon, no guofeng decorative poster.
 ```
 
-## Shot list 模板
-
-```text
-1. 放置位置：{段落后}
-   主题：{图名}
-   核心意思：{一句话}
-   结构类型：{门槛/换座/桥/天平/校准/岔路等}
-   小白动作：{小白正在做什么}
-   建议元素：{3-6 个物件}
-   标注词：{3-6 个短中文词}
-```
-
 ## 提示词写法提醒
 
 - 先写文章观点，再写物理隐喻，再写小白动作。
 - 不要只写“画一个象征某某的图”；要写具体物件和动作。
 - 不要让标注承担全部解释；画面动作本身要能表达意思。
 - 如果画面像 PPT，把“节点、流程、模块、架构”等词替换成寓言物件。
+- 系列图必须逐字复用同一段小白角色锚点；每张批注统一为 3-6 个。

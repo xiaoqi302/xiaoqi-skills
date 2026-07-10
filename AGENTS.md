@@ -28,6 +28,9 @@
 ```
 
 如果修改了安装脚本，额外检查 dry-run 输出是否不会写入用户目录。
+如果本机已安装 Xiaoqi Skills，再运行 `./tools/install.sh --target codex --check-drift`；预期漂移必须在提交说明中交代。
+
+验证器必须覆盖 `agents/openai.yaml` 的 `$skill-name`、简介长度、资源引用、占位文件和总路由完整性，不能只检查字段是否存在。
 
 ## 提交规则
 

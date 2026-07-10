@@ -1,4 +1,4 @@
 interface:
-  display_name: "xiaoqi-news-brief"
-  short_description: "把 AI 和科技新闻写成小七风格快评"
-  default_prompt: "把这条 AI/科技新闻写成小七风格快评。"
+  display_name: "小七新闻快评"
+  short_description: "核清来源与日期，把 AI 和科技新闻写成有边界的小七风格快评"
+  default_prompt: "使用 $xiaoqi-news-brief 核对这条消息的来源和日期，再写成有边界的小七风格快评。"

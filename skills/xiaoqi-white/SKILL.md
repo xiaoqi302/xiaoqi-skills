@@ -1,91 +1,63 @@
 ---
 name: xiaoqi-white
-description: Use when the user wants to turn a topic, article, note, lesson, workflow, product idea, or explanation into a minimalist Chinese Xiaoqi-style explainer card with black marker line art, red accent arrows, large readable handwritten Chinese text, optional aspect ratio, and default 16:9 layout.
+description: 将一个非复杂技术观点、结论、经验或行动建议转成极简中文白板卡，使用大字、黑线、少量红色强调和充足留白。用于用户已有明确观点并希望快速可视化的场景；不用于系统架构、技术机制或数据关系，不用于只给一个主题的 3:4 笔记图，也不负责整篇文章的配图选点。
 ---
 
-# Xiaoqi White
+# 小七极简白板卡
 
-Create clean Chinese Xiaoqi-style explainer cards: plain white background, black marker handwriting, simple line doodles, red accent arrows, and one clear bottom takeaway.
+把一个明确观点压缩成一张五秒可读的白板卡。只表达一个结论，不把内容做成复杂技术图、知识大全或多页教程。
 
-## Workflow
+详细检查与修复规则见 [references/qa-checklist.md](references/qa-checklist.md)。
 
-1. Read the source content and identify:
-   - one strong hook title
-   - one core conclusion
-   - 3-5 short key points
-   - 3-6 drawable objects or scenes
-   - one bottom summary sentence
-2. Determine aspect ratio:
-   - Default: `16:9`
-   - If the user specifies a ratio, use it exactly, such as `1:1`, `4:5`, `16:9`, `9:16`, `3:4`, or a custom ratio.
-3. Generate one prompt per requested image.
-   - Default image count: 5
-   - If the user specifies a number, use that number.
-   - Keep the same visual DNA while varying title, composition, examples, and emphasis.
+## 工作流
 
-## Visual DNA
+1. 从用户内容中确定一个核心观点，并提取：一个短标题、一个红色强调词、2-4 个支持标签、一个底部结论。只保留支撑该观点的内容。
+2. 选择简洁结构：`problem-solution`、`formula`、`before-after`、`process-ladder` 或 `cycle`。如果必须解释复杂模块或数据流，改用 `xiaoqi-info-card`。
+3. 默认生成 `1` 张、比例 `16:9`；只有用户明确要求时才生成多张或更换比例。
+4. 区分交付模式：
+   - 用户要求“生成 / 做图 / 出图”且环境有图像工具：实际生成图片。
+   - 用户明确只要提示词，或环境没有图像工具：输出完整可执行提示词并标注“仅提示词”；不要声称已经生成图片。
+5. 实际生成时使用当前环境可用的图像工具。生成后查看真实成图，检查是否仍只有一个观点、中文是否准确、红色是否克制、留白是否充足。
+6. 未通过时先局部编辑，否则重生成；每张图最多修复 `2` 轮。两轮后仍有问题，交付最优版本并指出剩余问题。
+7. 安全落盘：优先采用用户给出的绝对输出目录；相对目录必须先基于绝对工作区根解析，并确认结果仍在工作区内；未指定目录时保存到 `<绝对工作区根>/assets/xiaoqi-white/`。文件名不得覆盖已有文件；无法确定工作区时保留工具返回的原始绝对路径。
 
-- Plain warm white background, like a clean whiteboard or presentation board
-- Thick black handwritten Chinese title at the top
-- Minimal black marker line art, not watercolor
-- Red marker only for key phrase, big arrow, checkmark, or underline
-- Spacious composition with few elements
-- Speech bubbles, rounded task boxes, arrows, checklists, simple icons
-- One bottom conclusion sentence with a wavy underline
-- Clear Chinese lettering; no dense paragraphs
+## 视觉 DNA
 
-## Composition Patterns
+- 暖白纯色背景，粗黑手写中文和极简黑色线稿。
+- 红色只用于一个重点词、主箭头、勾或下划线。
+- 使用短标签、简单人物或物件，不用长段落。
+- 保持大面积留白，不做复杂架构、PPT 信息图或正式海报。
 
-Choose the clearest pattern for the content:
-
-- `problem -> solution`: left worried person or messy problem, red arrow, right solution boxes
-- `formula`: title, central formula, surrounding labels, bottom takeaway
-- `before/after`: left old way, right new way, red transition arrow
-- `process ladder`: four stacked boxes connected by red arrows
-- `cycle`: circular workflow for feedback loops or systems
-
-## Prompt Template
+## 提示词骨架
 
 ```text
-Create a clean whiteboard-style Chinese explainer card about: 「{TOPIC}」.
+生成一张极简中文白板手绘卡，表达唯一观点：「{CORE_IDEA}」。
 
-Aspect ratio: {ASPECT_RATIO}.
-Target audience: {AUDIENCE}.
-Source content summary: {SOURCE_CONTENT}.
+比例：{ASPECT_RATIO}。
+受众：{AUDIENCE}。
 
-Style reference:
-Minimalist black marker whiteboard drawing, plain warm white background, no ruled paper, no watercolor, no glossy poster. Thick handwritten black Chinese title, simple black line doodles, red marker accent arrows and emphasis words. Spacious layout, large readable Chinese, casual classroom whiteboard feel.
+画面使用暖白纯色背景、黑色马克笔手写大字和极简黑线插图。
+红色只用于一个强调词或主箭头。使用 {COMPOSITION} 构图，保持充足留白。
 
-On-image text, keep exact and readable:
-Title: 「{TITLE}」
-Red emphasis: 「{RED_EMPHASIS}」
-Key boxes:
-「{POINT_1}」
-「{POINT_2}」
-「{POINT_3}」
-「{POINT_4}」
-Bottom big sentence: 「{BOTTOM_SUMMARY}」
+图中文字必须准确、清晰，并严格使用：
+标题：「{TITLE}」
+红色强调：「{RED_EMPHASIS}」
+支持标签：「{POINT_1}」「{POINT_2}」{OPTIONAL_POINTS}
+底部结论：「{BOTTOM_SUMMARY}」
 
-Composition:
-{COMPOSITION}. Use simple black line doodles: {DRAWABLE_OBJECTS}. Use red marker only for the main arrow, emphasis phrase, checkmark, or underline.
-
-Text rules:
-All Chinese text must be big, crisp, black marker lettering. Use short phrases only. Avoid wrong characters, blurred text, tiny labels, dense paragraphs, watermarks, logos, QR codes, photorealism, notebook lines, blue/yellow marker, 3D rendering, glossy digital poster style, and clutter.
-
-Output: polished whiteboard sketchnote, high resolution.
+插图元素：{DRAWABLE_OBJECTS}。
+禁止密集小字、多观点拼盘、复杂技术架构、彩色装饰、logo、水印、二维码、
+摄影写实、3D、光泽海报和 PPT 风。
+输出一张高分辨率完整图片。
 ```
 
-## Defaults
+## 默认值
 
-- `AUDIENCE`: `中文社媒读者，中学生也能看懂`
-- `ASPECT_RATIO`: `16:9`
-- `IMAGE_COUNT`: `5`
-- Use 4 key boxes unless the content clearly needs 3 or 5.
-- Prefer concrete scenes over abstract icons.
+- `AUDIENCE`：中文社媒读者，中学生也能看懂。
+- `ASPECT_RATIO`：`16:9`。
+- `IMAGE_COUNT`：`1`。
 
-## Quality Bar
+## 交付
 
-- A reader should understand the card in 5 seconds.
-- The title and red emphasis must be the strongest visual signals.
-- Every card should include at least one person, object, or workflow sketch.
-- Keep text sparse; use layout and arrows to explain relationships.
+- 实际生成：给出观点、绝对文件路径、检查结果与仍存在的问题。
+- 仅提示词：只给完整提示词和建议比例，不虚构文件路径。

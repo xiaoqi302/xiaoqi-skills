@@ -1,5 +1,11 @@
 # Technical Sketch Card Style Guide
 
+## Scope
+
+- Use this style for mechanisms, architecture, pipelines, dependencies, comparisons, and data relations.
+- Do not invent a technical structure for a general opinion.
+- Keep one card focused on one relationship model.
+
 ## Core Look
 
 - Warm cream or off-white background, not pure white.
@@ -35,3 +41,24 @@
 - Photorealistic people or objects.
 - Glossy UI/card design.
 - Random decorative shapes unrelated to the explanation.
+- Invented arrows, formulas, metrics, module names, or causal claims.
+
+## Visual QA
+
+Check the actual rendered image, not only the prompt:
+
+- **Technical fidelity**: every node, direction, number, and comparison matches the source.
+- **Relationship clarity**: arrows encode flow, dependency, feedback, or change; none are decorative.
+- **Hierarchy**: title is first, the core mechanism second, and the takeaway third.
+- **Legibility**: labels are large and exact; no garbled terms, formulas, or tiny prose.
+- **Density**: use 3-5 main nodes and enough negative space to read the mechanism quickly.
+- **Style**: retain cream paper, black marker lines, restrained pastel grouping, and no glossy UI.
+
+## Repair Order
+
+1. Correct wrong text, numbers, formulas, nodes, and arrow directions.
+2. Remove surplus labels or decorative arrows.
+3. Enlarge the mechanism and restore whitespace.
+4. Regenerate only when local editing cannot restore fidelity.
+
+Stop after two repair rounds per image and disclose any remaining defect.

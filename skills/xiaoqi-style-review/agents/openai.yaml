@@ -1,4 +1,4 @@
 interface:
-  display_name: "xiaoqi-style-review"
-  short_description: "审校文章是否符合小七风格"
-  default_prompt: "检查这篇稿子像不像小七风格，并给出可替换改写。"
+  display_name: "小七风格审校"
+  short_description: "按内容类型审校小七文风，定位 AI 腔并给出可直接替换的修改"
+  default_prompt: "使用 $xiaoqi-style-review 按内容类型审校这份稿子，标出 AI 腔并给出最小替换方案。"

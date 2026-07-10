@@ -1,4 +1,4 @@
 interface:
-  display_name: "xiaoqi-wechat"
-  short_description: "生成小七风格中文公众号文章"
-  default_prompt: "把这段素材改写成小七公众号文章，保留事实，补足结构和个人判断。"
+  display_name: "小七公众号写作"
+  short_description: "把可靠素材重组为有判断、讲人话的小七风格公众号长文"
+  default_prompt: "使用 $xiaoqi-wechat 把这份素材写成事实可靠、结构清楚的小七风格公众号文章。"

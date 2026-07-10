@@ -18,3 +18,5 @@
 | `xiaoqi-logo-director` | `skills/xiaoqi-logo-director` | `~/.codex/skills/xiaoqi-logo-director` | `~/.claude/skills/xiaoqi-logo-director` |
 
 Use `tools/install.sh --target both` to refresh both host directories from the same source.
+
+Use `tools/install.sh --target codex --check-drift` to compare an installed copy without writing. Managed legacy names are archived only with the explicit `--prune` flag.

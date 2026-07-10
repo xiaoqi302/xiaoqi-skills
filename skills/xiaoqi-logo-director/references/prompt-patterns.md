@@ -65,9 +65,9 @@ Style: vector-like, crisp edges, minimal, recognizable at 32px, no text, no labe
 ## iOS App Icon Adaptation
 
 ```text
-Create an iOS app icon version of the selected logo mark.
-Keep the exact core silhouette. Place it inside a rounded-square app icon field with a clean background.
-No text, no mockup, no device frame, no extra symbols.
-The mark must remain recognizable at small sizes.
+Use the selected logo asset as the source; do not reconstruct it from a text-only prompt.
+Create an iOS app icon preview while preserving the exact core silhouette, proportions, cuts, gaps, and negative space.
+Center the unchanged mark inside a clean full-square icon field. Treat rounded corners as preview masking, not part of the master artwork.
+No text, no device frame, no extra symbols, and no geometry changes.
+The mark must remain recognizable at small sizes; also export or preview it at 32px.
 ```
-

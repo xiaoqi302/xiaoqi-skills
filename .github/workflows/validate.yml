@@ -1,0 +1,17 @@
+name: Validate skills
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Validate repository contracts
+        run: ./tools/validate-skills.sh
+      - name: Verify installation preview is read-only
+        run: ./tools/install.sh --target both --dry-run
+      - name: Build release archives
+        run: ./tools/build-skills.sh

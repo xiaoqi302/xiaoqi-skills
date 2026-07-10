@@ -1,4 +1,6 @@
 interface:
-  display_name: "xiaoqi"
-  short_description: "小七创作套件总入口和路由"
-  default_prompt: "帮我判断应该用哪个小七 skill，并继续完成任务。"
+  display_name: "小七创作路由"
+  short_description: "在小七系列 Skill 中识别任务，并选择最合适的单一入口"
+  default_prompt: "使用 $xiaoqi 判断这项任务该调用哪个小七 Skill，并按正确工作流继续完成。"
+policy:
+  allow_implicit_invocation: false

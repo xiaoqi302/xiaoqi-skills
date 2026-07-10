@@ -1,10 +1,18 @@
 # Logo Aesthetic Doctrine
 
-This skill uses the reference logos in `assets/reference-logos/` as taste benchmarks. Do not copy their symbols. Extract the standards below.
+Use the named market examples below only as category references. No local reference-logo asset set is assumed, and their symbols must never be copied.
 
-## What The Reference Set Proves
+## Contents
 
-The benchmark set is diverse:
+- [What The Market Examples Show](#what-the-market-examples-show)
+- [Shared Success Traits](#shared-success-traits)
+- [Valid Style Families](#valid-style-families)
+- [Anti-Pattern Library](#anti-pattern-library)
+- [Diversity Rule](#diversity-rule)
+
+## What The Market Examples Show
+
+The market is diverse:
 - **Single-color structural**: OpenAI, Anthropic, Cursor, Perplexity.
 - **Warm humane symbol**: Claude, Hugging Face.
 - **Bright system color**: Google, Microsoft, Gemini, Figma, Copilot.
@@ -118,4 +126,3 @@ Each 3-logo round should include:
 - one interface/product-led logo
 
 Do not generate three variants of the same family.
-

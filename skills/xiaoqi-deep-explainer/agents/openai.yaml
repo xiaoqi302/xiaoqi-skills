@@ -1,4 +1,4 @@
 interface:
-  display_name: "xiaoqi-deep-explainer"
-  short_description: "把复杂技术和论文机制讲成人话"
-  default_prompt: "把这个技术/论文/产品机制用小七风格讲明白。"
+  display_name: "小七深度解释"
+  short_description: "分层讲清复杂技术与论文，并严格区分原文主张、解释和推断"
+  default_prompt: "使用 $xiaoqi-deep-explainer 按合适深度讲清这个技术，并区分原文主张、解释与推断。"

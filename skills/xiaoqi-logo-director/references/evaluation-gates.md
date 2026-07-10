@@ -2,6 +2,18 @@
 
 Use these gates after each generation round.
 
+## Contents
+
+- [Gate 1: Big-Tech Logo Fitness](#gate-1-big-tech-logo-fitness)
+- [Gate 2: Brand Collision](#gate-2-brand-collision)
+- [Gate 3: Semantic Collision](#gate-3-semantic-collision)
+- [Gate 3.5: Logo vs UI Diagram](#gate-35-logo-vs-ui-diagram)
+- [Gate 4: Color Discipline](#gate-4-color-discipline)
+- [Gate 5: Original Motif](#gate-5-original-motif)
+- [Gate 6: Actual Artifact Checks](#gate-6-actual-artifact-checks)
+- [Scoring](#scoring)
+- [Clearance Boundary](#clearance-boundary)
+
 ## Gate 1: Big-Tech Logo Fitness
 
 Passes if:
@@ -87,9 +99,21 @@ Fails if:
 - it could be used by any SaaS company
 - the shape is a style trend, not a brand idea
 
+## Gate 6: Actual Artifact Checks
+
+After a mother mark is selected, create and visually inspect all of these from the same source asset:
+
+- `32px` color preview
+- monochrome preview
+- reverse preview on a dark background
+- `16px` and `32px` favicon previews
+- App icon preview with the core mark unchanged
+
+Reject the production adaptation if thin gaps disappear, the silhouette collapses, foreground and background merge, or any geometry differs from the selected master.
+
 ## Scoring
 
-Use 1-5:
+Score Fitness, Brand Collision, Semantic Collision, Color Discipline, and Original Motif separately from 1-5:
 
 - 1: collision or unusable
 - 2: polished but generic
@@ -97,4 +121,8 @@ Use 1-5:
 - 4: strong candidate, worth iterating
 - 5: ownable, scalable, distinctive
 
-Only keep 4 or 5.
+Any collision-gate failure is an automatic rejection. Otherwise, only keep concepts whose average is at least 4 and whose actual artifact checks pass.
+
+## Clearance Boundary
+
+These gates identify obvious visual and semantic collisions; they do not establish trademark availability, legal originality, or registrability. Commercial use requires separate jurisdiction-specific trademark and similar-device searches.
