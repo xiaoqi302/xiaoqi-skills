@@ -1,6 +1,6 @@
 ---
 name: xiaoqi-wechat
-description: 把已有事实材料、草稿或提纲重组为小七风格中文公众号文章，适用于用户明确要求公众号长文、技术评论、AI 行业分析或小七风格成稿。仅负责长文创作：短新闻快评用 xiaoqi-news-brief，概念讲解用 xiaoqi-deep-explainer，仅审校现稿用 xiaoqi-style-review；不用于纯翻译、逐句润色或凭空补事实。
+description: 把已有事实材料、草稿或提纲重组为小七风格中文公众号文章，适用于用户明确要求公众号长文、技术评论、AI 行业分析或小七风格成稿。多来源事实仍需整理时先用 xiaoqi-research-dossier；短新闻快评用 xiaoqi-news-brief，概念讲解用 xiaoqi-deep-explainer，仅审校现稿用 xiaoqi-style-review；不用于纯翻译、逐句润色或凭空补事实。
 ---
 
 # Xiaoqi WeChat

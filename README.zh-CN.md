@@ -4,7 +4,7 @@
 
 小七创作套件：把 AI、科技资料和复杂技术，转成有事实边界的中文内容、清晰解释与克制的手绘视觉。
 
-`0.2.0` 版本包含 12 个可移植的 `SKILL.md` 工作流，适用于 Codex、Claude Code 及其他兼容 Agent。
+`0.3.0` 版本包含 15 个可移植的 `SKILL.md` 工作流，适用于 Codex、Claude Code 及其他兼容 Agent。
 
 ## 安装
 
@@ -41,30 +41,37 @@
 | Skill | 用途 | 产出 |
 |---|---|---|
 | `xiaoqi` | 用户不知道选哪个工作流时显式调用 | 选择一个主 Skill 并继续执行 |
+| `xiaoqi-research-dossier` | 在写作前把多来源资料整理成证据包 | 来源清单、时间线、主张账本和缺口 |
 | `xiaoqi-wechat` | 把经过核实的素材写成中文公众号文章 | 结构完整的长文成稿 |
 | `xiaoqi-news-brief` | 解读一条 AI/科技事件并控制来源、日期边界 | 事实摘要、人话解释、有边界的判断 |
 | `xiaoqi-deep-explainer` | 按读者层级解释论文、系统、机制或技术概念 | 分层解释、例子与局限 |
 | `xiaoqi-style-review` | 审校现有文稿的小七风格与常见 AI 腔 | 有锚点的评分、优先修改和替换片段 |
+| `xiaoqi-content-repurpose` | 把定稿转换为指定平台的发布版本 | 保留事实与立场的完整平台稿 |
 | `xiaoqi-info-card` | 呈现技术机制、架构、流程和数据关系 | 米白底技术图解提示词或成图 |
 | `xiaoqi-white` | 用极简白板卡解释一个非复杂观点 | 单张黑线红标中文解释卡 |
 | `xiaoqi-topic-note` | 把一个主题转成低密度竖版笔记图 | 单张 3:4 中文主题笔记 |
 | `xiaoqi-fable` | 执行已经确定的小白未来寓言配图 shot | 经过视觉检查的正文配图 |
 | `xiaoqi-cover-image` | 规划或生成文章、播客、视频封面 | 3 个方向或 1 张检查后的封面 |
 | `xiaoqi-article-illustrator` | 为整篇文章选择配图位置并路由执行 Skill | 带段落锚点的 shot list |
+| `xiaoqi-visual-qa` | 按目标规格检查一张真实成图 | 通过、修复或重生成判断及精确指令 |
 | `xiaoqi-logo-director` | 设计原创产品 Logo 方向并完成生产交接 | brief、候选方向、检查与锁定母版 |
 
 ## 路由边界
 
 - 单条时效新闻用 `xiaoqi-news-brief`；可发布长文用 `xiaoqi-wechat`。
+- 多来源、争议主张或复杂时间线先用 `xiaoqi-research-dossier`，再进入解释或写作。
 - 理解技术机制用 `xiaoqi-deep-explainer`；诊断已有文稿用 `xiaoqi-style-review`。
+- 只有原稿已经定稿时才用 `xiaoqi-content-repurpose`；它负责平台改编，不负责重新研究事实。
 - 技术系统和关系用 `xiaoqi-info-card`，单观点极简解释用 `xiaoqi-white`，单主题竖版图用 `xiaoqi-topic-note`。
 - 整篇文章选点用 `xiaoqi-article-illustrator`；确定后的单张小白配图由 `xiaoqi-fable` 执行。
+- 任意成图需要明确通过判断或修复指令时，用 `xiaoqi-visual-qa` 查看真实图片后质检。
 
 ## 推荐工作流
 
 ```text
-资料 -> xiaoqi-news-brief -> xiaoqi-wechat -> xiaoqi-style-review
-     -> xiaoqi-article-illustrator -> xiaoqi-cover-image
+多来源资料 -> xiaoqi-research-dossier -> xiaoqi-news-brief 或 xiaoqi-deep-explainer
+          -> xiaoqi-wechat -> xiaoqi-style-review -> xiaoqi-content-repurpose
+          -> xiaoqi-article-illustrator -> 视觉执行 -> xiaoqi-visual-qa
 ```
 
 ```text

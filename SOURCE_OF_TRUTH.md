@@ -1,22 +1,25 @@
 # SOURCE_OF_TRUTH
 
-`xiaoqi-skills` 的唯一真源是本仓库的 `skills/` 目录。当前版本为 `0.2.0`。
+`xiaoqi-skills` 的唯一真源是本仓库的 `skills/` 目录。当前版本为 `0.3.0`。
 
 ## 真源目录
 
 ```text
 skills/
   xiaoqi/
+  xiaoqi-research-dossier/
   xiaoqi-wechat/
   xiaoqi-news-brief/
   xiaoqi-deep-explainer/
   xiaoqi-style-review/
+  xiaoqi-content-repurpose/
   xiaoqi-info-card/
   xiaoqi-white/
   xiaoqi-topic-note/
   xiaoqi-fable/
   xiaoqi-cover-image/
   xiaoqi-article-illustrator/
+  xiaoqi-visual-qa/
   xiaoqi-logo-director/
 ```
 
@@ -40,7 +43,7 @@ skills/
 
 安装器默认只新增或替换当前 Skill，不删除其它目录。
 
-以下两个旧版名称由 `0.2.0` 管理，但只会在显式传入 `--prune` 时备份并移除：
+以下两个旧版名称由当前安装器管理，但只会在显式传入 `--prune` 时备份并移除：
 
 - `xiaoqi-tech-note`：能力已由 `xiaoqi-info-card`、`xiaoqi-white` 和 `xiaoqi-deep-explainer` 覆盖。
 - `xiaoqi-parallel-goals`：不属于小七内容创作套件的当前产品边界。

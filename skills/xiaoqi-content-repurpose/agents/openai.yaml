@@ -1,0 +1,4 @@
+interface:
+  display_name: "小七内容再创作"
+  short_description: "将定稿长文忠实改写为不同平台版本，同时保留事实、立场与小七语气"
+  default_prompt: "使用 $xiaoqi-content-repurpose 把这篇定稿改成适合目标平台发布的版本。"

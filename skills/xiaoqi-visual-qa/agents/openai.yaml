@@ -1,0 +1,4 @@
+interface:
+  display_name: "小七视觉质检"
+  short_description: "检查成图的文字、比例、留白、构图、风格与角色一致性并给出修复指令"
+  default_prompt: "使用 $xiaoqi-visual-qa 检查这张图是否符合目标规格，并给出可执行的修复方案。"

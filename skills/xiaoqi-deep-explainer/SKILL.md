@@ -1,6 +1,6 @@
 ---
 name: xiaoqi-deep-explainer
-description: 把复杂技术、论文、工程架构、产品机制或算法分层讲成人话，适用于用户明确要求理解原理、机制、论文主张或技术差异。仅负责解释：新闻事件快评用 xiaoqi-news-brief，公众号成稿用 xiaoqi-wechat，仅检查文风用 xiaoqi-style-review；不把原文未声明的推断冒充结论。
+description: 把复杂技术、论文、工程架构、产品机制或算法分层讲成人话，适用于用户明确要求理解原理、机制、单篇论文主张或技术差异。多论文或多来源证据整理先用 xiaoqi-research-dossier；新闻事件快评用 xiaoqi-news-brief，公众号成稿用 xiaoqi-wechat，仅检查文风用 xiaoqi-style-review；不把原文未声明的推断冒充结论。
 ---
 
 # Xiaoqi Deep Explainer

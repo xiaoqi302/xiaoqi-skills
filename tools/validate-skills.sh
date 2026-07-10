@@ -11,16 +11,19 @@ VERSION_FILE="$ROOT_DIR/VERSION"
 
 expected=(
   xiaoqi
+  xiaoqi-research-dossier
   xiaoqi-wechat
   xiaoqi-news-brief
   xiaoqi-deep-explainer
   xiaoqi-style-review
+  xiaoqi-content-repurpose
   xiaoqi-info-card
   xiaoqi-white
   xiaoqi-topic-note
   xiaoqi-fable
   xiaoqi-cover-image
   xiaoqi-article-illustrator
+  xiaoqi-visual-qa
   xiaoqi-logo-director
 )
 

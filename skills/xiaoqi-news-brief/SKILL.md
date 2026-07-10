@@ -1,6 +1,6 @@
 ---
 name: xiaoqi-news-brief
-description: 将 AI、科技、产品发布、模型更新、开发者工具或公司动态写成有来源边界的小七风格中文快评，适用于用户要新闻解读、消息核查或短评。仅负责单条新闻快评：公众号长文用 xiaoqi-wechat，技术机制详解用 xiaoqi-deep-explainer，仅审校现稿用 xiaoqi-style-review；不用于无来源的“最新消息”汇总。
+description: 将 AI、科技、产品发布、模型更新、开发者工具或公司动态写成有来源边界的小七风格中文快评，适用于用户要单条新闻解读、消息核查或短评。多来源综合、复杂时间线或证据包先用 xiaoqi-research-dossier；公众号长文用 xiaoqi-wechat，技术机制详解用 xiaoqi-deep-explainer，仅审校现稿用 xiaoqi-style-review；不用于无来源的“最新消息”汇总。
 ---
 
 # Xiaoqi News Brief

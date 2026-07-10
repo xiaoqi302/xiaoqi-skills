@@ -1,0 +1,4 @@
+interface:
+  display_name: "小七研究证据包"
+  short_description: "把网页、论文、新闻和 PDF 整理成可追溯、可交接的研究证据包"
+  default_prompt: "使用 $xiaoqi-research-dossier 把这些材料整理成带来源清单、时间线、主张账本和缺口说明的研究证据包。"
